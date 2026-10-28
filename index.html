@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RESPONSIVE NAVBAR</title>
+    <link rel="stylesheet" href="./src/output.css" />
+  </head>
+
+  <html>
+    <body>
+      <nav class="bg-white shadow-md px-6 py-4">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+          <!-- DESKTOP MENU -->
+          <div class="text-2xl font-bold text-blue-600">
+            MOHAMMAD COLLECTION
+          </div>
+
+          <ul class="hidden md:flex gap-2 text-gray-600 font-medium">
+            <li>
+              <a href="#" class="text-gray-700 hover:text-blue-600">Home</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-700 hover:text-blue-600">Products</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-700 hover:text-blue-600">Contact</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-700 hover:text-blue-600">About</a>
+            </li>
+          </ul>
+
+          <!-- MOBILE MENU icon -->
+          <div class="md:hidden">
+            <button id="menu-btn" class="text-3xl">&#9776;</button>
+          </div>
+        </div>
+        <!-- MOBILE MENU -->
+        <div class="hidden md:hidden px-4 mt-2" id="mobile-menu">
+          <ul
+            class="flex flex-col gap-6 text-gray-600 font-medium text-right items-end"
+          >
+            <li>
+              <a href="#" class="text-gray-700 hover:text-blue-600">Home</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-700 hover:text-blue-600">Products</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-700 hover:text-blue-600">Contact</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-700 hover:text-blue-600">About</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      </script>
+    </body>
+  </html>
+</html>
